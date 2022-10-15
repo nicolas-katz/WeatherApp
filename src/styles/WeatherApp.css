@@ -79,9 +79,65 @@ form input {
     border-radius: 2px;
 }
 
+.loadingContainer {
+    width: 100%;
+    min-height: 400px;
+    max-height: 100vh;
+    margin-top: 40px;
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(2, 0, 36);
+    background-image: linear-gradient(
+        43deg,
+        rgba(2, 0, 36, 1) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgba(0, 212, 255, 1) 100%,
+    );
+    border-radius: 50%;
+
+    animation: rotation 0.5s linear infinite;
+}
+
+.loader div {
+    width: 20px;
+    height: 20px;
+
+    background-color: white;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(358deg);
+    }
+}
+
 @media only screen and (min-width: 768px) {
     form,
-    .weatherMainInfo {
+    .weatherMainInfo,
+    .loadingContainer {
         width: 60%;
     }
 
