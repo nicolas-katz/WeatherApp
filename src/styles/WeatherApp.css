@@ -1,0 +1,91 @@
+.weatherAppContainer {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(212, 108, 108);
+}
+
+form {
+    width: 100%;
+    height: 54px;
+}
+
+form input {
+    width: 100%;
+    height: 100%;
+    padding: 0 20px;
+
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    transition: .3s;
+
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.weatherMainInfo {
+    width: 100%;
+    height: max-content;
+    margin-top: 40px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-color: white;
+    border: 1px solid gainsboro;
+    border-radius: 2px;
+}
+
+.weatherMainInfo h2 {
+    color: black;
+    font-size: 28px;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.weatherMainInfo h3, 
+.weatherMainInfo p {
+    margin-top: 14px;
+
+    color: gray;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.weatherMainInfo img {
+    object-fit: contain;
+}
+
+.weatherMainInfo iframe {
+    width: 100%;
+    height: 200px;
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 2px;
+}
+
+@media only screen and (min-width: 768px) {
+    form,
+    .weatherMainInfo {
+        width: 60%;
+    }
+
+    .weatherMainInfo iframe {
+        height: 400px;
+    }
+}
